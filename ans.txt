@@ -1,0 +1,132 @@
+Q 1 )
+
+x=int(input('Enter number 1: '))
+y=int(input('Enter number 2: '))
+sum1=0
+sum2=0
+for i in range(1,x):
+    if x%i==0:
+        sum1+=i
+for j in range(1,y):
+    if y%j==0:
+      sum2+=j
+if(sum1==y and sum2==x):
+  print('Amicable!')
+else:
+   print('Not Amicable!')
+
+
+
+Q 2 )
+
+
+CREATE TABLE Product (
+    p_id int,
+    p_price int,
+    p_Name varchar(25),
+    p_warrenty int,
+    p_qty int
+);
+select * from Product
+
+INSERT INTO Product  (p_id, p_price, p_Name, p_warrenty, p_qty)
+VALUES (1,35000,'Washing Machine',3,10);
+
+INSERT INTO Product  (p_id, p_price, p_Name, p_warrenty, p_qty)
+VALUES (2,45000,'Smart TV',2,5);
+
+INSERT INTO Product  (p_id, p_price, p_Name, p_warrenty, p_qty)
+VALUES (33000,'AC',5,6);
+
+INSERT INTO Product  (p_id, p_price, p_Name, p_warrenty, p_qty)
+VALUES (20000,'Home Theater',1, NULL)
+
+
+Q 3)
+
+A)
+SELECT student.name, student.id, record.class, record.city
+FROM student, record
+WHERE student.city = record.city;
+
+B)
+SELECT student.name, record.id, record.city
+FROM student, record
+WHERE Student.id < Record.id ;
+
+C)
+SELECT student.name, record.id
+FROM student, table b
+WHERE a.common_field = b.common_field;
+
+
+D)
+SELECT student.name, student.id
+FROM student
+FULL OUTER JOIN Student ON student.studentname.studentID
+ORDER BY student.studentName;
+
+
+Q 7)
+
+arr = [20, 2, 56, 4, 4];     
+sum = 0;    
+#array to calculate sum of elements    
+for i in range(0, len(arr)):    
+  sum = sum + arr[i];    
+print("Sum of all the elements of an array: " + str(sum));    
+
+
+
+Q 8)
+
+#include <stdio.h>
+#include <limits.h> // For INT_MIN
+
+#define MAX_SIZE 100  // Maximum array size 
+
+int main()
+{
+    int arr[MAX_SIZE], size, i;
+    int max1, max2;
+
+    
+    printf("Enter size of the array (1-100): ");
+    scanf("%d", &size);
+
+    
+    printf("Enter elements in the array: ");
+    for(i=0; i<size; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    max1 = max2 = INT_MIN;
+
+    for(i=0; i<size; i++)
+    {
+        if(arr[i] > max1)
+        {
+            max2 = max1;
+            max1 = arr[i];
+        }
+        else if(arr[i] > max2 && arr[i] < max1)
+        {
+            max2 = arr[i];
+        }
+    }
+
+    printf("First largest = %d\n", max1);
+    printf("Second largest = %d", max2);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
